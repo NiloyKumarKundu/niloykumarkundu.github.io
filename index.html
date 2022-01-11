@@ -1,3 +1,29 @@
+ <?php
+    $message_sent = false;
+    if (isset($_POST['email']) && $_POST['email'] != "") {
+        
+        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $name = $_POST['name'];
+            $email= $_POST['email'];
+            $message= $_POST['description'];
+            $to = "nkundu191071@bscse.uiu.ac.bd";
+            $subject = "Mail From my Portfolio Site";
+            $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+            $headers = "From: noreply@gmail.com" . "\r\n" . "CC: somebodyelse@example.com";
+
+            echo $name . " " . $email . " " . $message;
+
+            mail($to,$subject,$txt,$headers);
+            header("Location: index.php?mailsend");
+
+            $message_sent = true;
+        } else {
+            $message_sent = false;
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,6 +106,15 @@
     </header>
   </div>
 
+  <?php
+    if ($message_sent):
+   ?>
+    <h3> Thank's we will be in touch </h3>
+
+   <?php 
+   else:
+   ?>
+
   <!-- HOME -->
   <div id="home" class="collapse show">
     <div class="card card-body bg-primary text-white py-5">
@@ -152,6 +187,8 @@
 
     </div>
   </div>
+
+  
 
 
   <!-- RESUME -->
@@ -312,7 +349,8 @@
       <h3>Get In Touch</h3>
       <p>You can also contact with me through email. Just fill up the form and submit it and I will contact with you as
         soon as possible.</p>
-      <form>
+
+      <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form-group">
           <div class="input-group input-group-lg">
             <div class="input-group-prepend">
@@ -320,7 +358,7 @@
                 <i class="fas fa-user"></i>
               </span>
             </div>
-            <input type="text" class="form-control bg-dark text-white" placeholder="Your Name">
+            <input type="text" class="form-control bg-dark text-white" name="name" placeholder="Your Name">
           </div>
         </div>
 
@@ -331,7 +369,7 @@
                 <i class="fas fa-envelope"></i>
               </span>
             </div>
-            <input type="email" class="form-control bg-dark text-white" placeholder="Your Email">
+            <input type="email" class="form-control bg-dark text-white" name="email" placeholder="Your Email">
           </div>
         </div>
 
@@ -342,15 +380,15 @@
                 <i class="fas fa-pencil-alt"></i>
               </span>
             </div>
-            <textarea class="form-control bg-dark text-white" placeholder="Write Here...."></textarea>
+            <textarea class="form-control bg-dark text-white" rows="4" name="description" placeholder="Write Here...."></textarea>
           </div>
         </div>
 
-        <input type="submit" value="Submit" class="btn btn-danger btn-block btn-lg">
+        <input type="submit" name="submit" value="Submit" class="btn btn-danger btn-block btn-lg">
       </form>
     </div>
-  </div>
 
+  </div>
 
   <!-- FOOTER -->
   <footer id="main-footer" class="p-5 bg-dark text-white">
@@ -362,8 +400,10 @@
       </div>
     </div>
   </footer>
-  </div>
 
+  <?php
+    endif;
+   ?>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -400,6 +440,7 @@
       $(this).ekkoLightbox();
     });
   </script>
+  </div>
 </body>
 
 </html>
