@@ -1,1 +1,14 @@
-# niloykumarkundu.github.io
+# Niloy Kumar Kundu
+
+My curiosity lies at the intersection of [AI for Software Engineering](https://en.wikipedia.org/wiki/Software_engineering#Artificial_intelligence_in_software_engineering), [Software Security](https://en.wikipedia.org/wiki/Application_security), [Large Reasoning Models](https://en.wikipedia.org/wiki/Reasoning_language_model) for Source Code, and the combination of [Reinforcement Learning](https://en.wikipedia.org/wiki/Reinforcement_learning) with reasoning-driven ML systems. I am also drawn to [Medical Image Processing](https://en.wikipedia.org/wiki/Medical_imaging) and the use of
+[LLMs](https://en.wikipedia.org/wiki/Large_language_model) / [VLLMs](https://en.wikipedia.org/wiki/Vision-language_model). Recently, I have been working on GenAI applications and experimenting with agentic AI solutions that bring together reasoning, retrieval, and tool-use. Beyond prototyping, I enjoy making these ideas practical by deploying ML systems in the cloud and exploring how Azure AI services can support research-to-application transitions. What excites me most is building AI systems that do more than perform well, they can reason, adapt, and support human decision-making in meaningful ways.
+
+---
+
+I completed my **B.Sc. in Computer Science and Engineering (Major: Data Science)** at [United International University](http://www.uiu.ac.bd/), graduating with a **CGPA of 3.87/4.00** and ranking in the **top 6% of my cohort**. My thesis, _Enhanced Speech Emotion Recognition with Efficient Channel Attention-Guided Deep CNN-BiLSTM Framework_, focused on building a lightweight model that achieved strong results across multilingual datasets. I also served as a Research Assistant on a funded project (**IAR Grant: BDT 500,000**) in collaboration with Brandenburg University, Germany, where I worked on NSCLC subtype classification using radiomics features. My research contributions include publications on precision agriculture (_Computers and Electronics in Agriculture_, IF: 8.9), medical image analysis (_ICCIT 2023_), and federated learning (_IEEE I2CT 2023_).  
+Along the way, I received multiple merit-based scholarships, served as a Teaching Assistant for _Data Structures and Algorithms_, and led initiatives as Instructor and Head of Research Assistants at the _UIU App Forum_.  
+I also enjoyed competitive programming, placing 5th in the _UIU Coders’ Combat 3.0: Intra-University Programming Contest_.
+
+---
+
+Looking ahead, I am passionate about advancing safe and reliable [AGI research](https://en.wikipedia.org/wiki/Artificial_general_intelligence). In the near term, I aim to contribute to reasoning-augmented LLMs for secure software engineering, reproducible ML benchmarks, and interpretable medical AI. In the long run, my vision is to establish a research group that not only develops explainable and security-aware AGI systems but also fosters collaboration, mentorship, and open science. My goal is to help build AI that strengthens both the tools we use to engineer software and the systems we rely on in healthcare, making them more transparent, trustworthy, and impactful.
